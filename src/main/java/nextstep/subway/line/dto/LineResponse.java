@@ -17,12 +17,12 @@ public class LineResponse {
     private String name;
     private String color;
     private List<StationResponse> stations;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    private LocalDateTime createdDate;
-    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    private LocalDateTime modifiedDate;
+//    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+//    @JsonSerialize(using = LocalDateTimeSerializer.class)
+//    private LocalDateTime createdDate;
+//    @JsonDeserialize(using = LocalDateTimeDeserializer.class)
+//    @JsonSerialize(using = LocalDateTimeSerializer.class)
+//    private LocalDateTime modifiedDate;
 
     public LineResponse() {
     }
@@ -32,8 +32,8 @@ public class LineResponse {
         this.name = name;
         this.color = color;
         this.stations = stations;
-        this.createdDate = createdDate;
-        this.modifiedDate = modifiedDate;
+        // this.createdDate = createdDate;
+        // this.modifiedDate = modifiedDate;
     }
 
     public static LineResponse of(Line line) {
@@ -69,11 +69,11 @@ public class LineResponse {
         return stations;
     }
 
-    public LocalDateTime getCreatedDate() {
+    /*public LocalDateTime getCreatedDate() {
         return createdDate;
     }
 
     public LocalDateTime getModifiedDate() {
         return modifiedDate;
-    }
+    }*/
 }
